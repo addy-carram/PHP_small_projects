@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laborator</title>
+    <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div>
+            <h2>Calcularea salariului</h2>
+            <form action="sarcina1.php" method="POST">
+            <div>
+                <label for="nume">Nume</label>
+                <input type="text" name="nume" id="nume" required>
+            </div>
+            <div>
+                <label for="ore">Nr de ore</label>
+                <input type="number" name="ore" id="ore" min="0" required>
+            </div>
+            <div>
+                <label for="taxa">Taxa</label>
+                <input type="number" name="taxa" id="taxa" min="0" step="any" required>
+            </div>
+            <div>
+                <label for="vechime">Vechimea de munca</label>
+                <input type="number" name="vechime" id="vechime" min="0" required>
+            </div>
+            <div style="display: flex; flex-direction: row; align-items: center; gap: 10px;">
+                <input type="checkbox" id="lucrat" name="lucrat" value="A_lucrat" style="width: auto;">
+                <label for="lucrat">A lucrat in weekend</label>
+            </div>
+            <input type="submit" name="submit" id="calcul" value="Calculeaza">
+            </form>
+
+        </div>
+               <div >
+            <h2>Înregistrarea la un curs de formare</h2>
+            <form action="sarcina2.php" method="POST">
+            <div>
+                <label for="nume1">Nume/Prenume</label>
+                <input type="text" name="nume1" id="nume1" required>
+            </div>
+            <div>
+                <label for="varsta">Varsta</label>
+                <input type="number" name="varsta" id="varsta" min="10" required>
+            </div>
+            <div>
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" required>
+            </div>
+            <div>
+                <label for="curs">Curs</label>
+               <select name="curs" id="curs">
+                <option value="PHP Web Development">PHP Web Development</option>
+                <option value="JavaScript">JavaScript</option>
+                <option value="Web Design">Web Design</option>
+                <option value="Python">Python</option>
+                </select>
+            </div>
+            <div style="display: flex; flex-direction: row; align-items: center; gap: 10px;">
+                <input type="radio" id="elev" name="packet" value="elev">
+                <label for="elev">Elev</label><br>
+                <input type="radio" id="student" name="packet" value="student">
+                <label for="student">Student</label><br>
+                <input type="radio" id="adult" name="packet" value="adult">
+                <label for="adult">Adult</label>
+            </div>
+            <div style="display: flex; flex-direction: row; align-items: center; gap: 10px;">
+                <input type="checkbox" id="material" name="material" value="material">
+                <label for="material">Materiale tiparite</label><br>
+                <input type="checkbox" id="certificat" name="certificat" value="certificat">
+                <label for="certificat">Certificat</label><br>
+                <input type="checkbox" id="acces" name="acces" value="acces">
+                <label for="acces">Acces</label><br>
+            </div>
+            
+            <input type="submit" name="submit" id="calcul" value="Calculeaza">
+            </form>
+
+        </div>
+        <div >
+            <h2>Calcularea taxa colet</h2>
+            <form action="sarcina3.php" method="POST">
+            <div>
+                <label for="nume2">Nume/Prenume</label>
+                <input type="text" name="nume2" id="nume2" required>
+            </div>
+            <div>
+                <label for="valoarea">Valoarea</label>
+                <input type="number" name="valoarea" id="valoarea" min="0" step="any" required>
+            </div>
+            <div>
+                <label for="greutatea">Greutatea</label>
+                <input type="number" name="greutatea" id="greutatea" min="0" step="any" required>
+            </div>
+            <div>
+                <label for="zona">Zona</label>
+               <select name="zona" id="zona">
+                <option value="Chisinau">Chisinau</option>
+                <option value="Centru">Centru</option>
+                <option value="Nord">Nord</option>
+                <option value="Sud">Sud</option>
+                </select>
+            </div>
+            <div style="display: flex; flex-direction: row; align-items: center; gap: 10px;">
+                <label>Tip de livrare</label>
+                <input type="radio" id="standart" name="livrare" value="standart" required>
+                <label for="standart">Standart</label>
+                <input type="radio" id="express" name="livrare" value="express">
+                <label for="express">Express</label>
+            </div>
+            <div style="display: flex; flex-direction: row; align-items: center; gap: 10px;">
+                <input type="checkbox" id="ambalare" name="ambalare" value="ambalare">
+                <label for="ambalare">Ambalare</label><br>
+            </div>
+            
+            <input type="submit" name="submit" id="calcul" value="Calculeaza">
+            </form>
+
+
+        </div>
+         <div >
+            <h2>Evaluarea candidatului</h2>
+            <form action="sarcina4.php" method="POST">
+            <div>
+                <label for="nume4">Nume/Prenume</label>
+                <input type="text" name="nume4" id="nume4" required>
+            </div>
+            <div>
+                <label for="teoretica">Nota Proba teoretica</label>
+                <input type="number" name="teoretica" id="teoretica" min="1" max="10" step="any" required>
+            </div>
+            <div>
+                <label for="practica">Nota Proba practica</label>
+                <input type="number" name="practica" id="practica" min="1" max="10" step="any" required>
+            </div>
+            <div>
+                <label for="interviu">Nota interviu</label>
+                <input type="number" name="interviu" id="interviu" min="1" max="10" step="any" required>
+            </div>
+            <div>
+                <label for="experienta">Ani experienta</label>
+                <input type="number" name="experienta" id="experienta" min="0" required>
+            </div>
+            <div style="display: flex; flex-direction: row; align-items: center; gap: 10px;">
+                <input type="checkbox" id="certificat" name="certificat" value="certificat">
+                <label for="certificat">Certificat</label><br>
+            </div>
+            <input type="submit" name="submit" id="calcul" value="Calculeaza">
+            </form>
+
+        </div>
+<div >
+            <h2>Configurarea pachet turistic</h2>
+            <form action="sarcina5.php" method="POST">
+            <div>
+                <label for="nume">Nume/Prenume</label>
+                <input type="text" name="nume" id="nume" required>
+            </div>
+            <div>
+                <label for="destinatia">Destinatia</label>
+                <select name="destinatia" id="destinatia">
+                    <option value="Romania">Romania</option>
+                    <option value="Bulgaria">Bulgaria</option>
+                    <option value="Grecia">Grecia</option>
+                    <option value="Turcia">Turcia</option>
+                </select>
+            </div>
+            <div>
+                <label for="persoane">Nr persoane</label>
+                <input type="number" name="persoane" id="persoane" min="1" required>
+            </div>
+            <div>
+                <label for="nopti">Nr nopti</label>
+                <input type="number" name="nopti" id="nopti" min="1" required>
+            </div>
+            <div style="display: flex; flex-direction: row; align-items: center; gap: 10px;">
+                <input type="radio" id="3star" name="hotel" value="3 stars" >
+                <label for="3star">3 stars</label><br>
+                <input type="radio" id="4star" name="hotel" value="4 stars">
+                <label for="4star">4 stars</label><br>
+                <input type="radio" id="5star" name="hotel" value="5 stars">
+                <label for="5star">5 stars</label><br>
+            </div>
+            <div>
+                <label for="masa">Tipul mesei</label>
+               <select name="masa" id="masa">
+                <option value="fara_masa">Fara masa</option>
+                <option value="mic_dejun">Mic dejun</option>
+                <option value="demipensiune">Demipensiune</option>
+                <option value="all">All inclusive</option>
+                </select>
+            </div>
+            <div style="display: flex; flex-direction: row; align-items: center; gap: 10px;">
+                <input type="checkbox" id="aeroport" name="aeroport" value="transfer aeroport">
+                <label for="aeroport">Transfer aeroport</label><br>
+                <input type="checkbox" id="asigurare" name="asigurare" value="asigurare">
+                <label for="asigurare">Asigurare</label><br>
+                <input type="checkbox" id="excursie" name="excursie" value="excursie">
+                <label for="excursie">Excursie</label><br>
+            </div>
+            <input type="submit" name="submit" id="calcul" value="Calculeaza">
+            </form>
+
+        </div>
+    </body>
+</html>
