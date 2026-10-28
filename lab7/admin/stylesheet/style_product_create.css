@@ -1,0 +1,165 @@
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Courier New", Courier, monospace;
+  background-color: beige;
+}
+
+main {
+  box-sizing: border-box;
+  width: min(860px, 94vw);
+  padding: 28px 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: rgb(1, 43, 4);
+  color: rgb(81, 241, 69);
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+h2,
+p {
+  margin: 0;
+}
+
+/* ---------- GRID FORMULAR ---------- */
+form {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 16px 20px;
+}
+
+.span-2 {
+  grid-column: span 2;
+}
+.span-3 {
+  grid-column: span 3;
+}
+.span-6 {
+  grid-column: span 6;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0; /* împiedică câmpurile să iasă din grid */
+}
+
+label {
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+/* asterisc automat la câmpurile required */
+.field:has(:required) > label::after {
+  content: " *";
+}
+
+/* ---------- INPUT-URI ---------- */
+input,
+select,
+textarea {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px 16px;
+  border: 1px solid rgb(81, 241, 69);
+  border-radius: 10px;
+  background-color: beige;
+  color: rgb(1, 43, 4);
+  font-family: "Courier New", Courier, monospace;
+  font-size: 0.95rem;
+}
+
+textarea {
+  resize: none;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  background-color: rgb(212, 249, 209);
+  box-shadow: 0 0 0 3px rgb(81, 241, 69);
+}
+
+/* butonul din file input */
+input[type="file"] {
+  padding: 6px 10px;
+}
+input[type="file"]::file-selector-button {
+  padding: 6px 14px;
+  margin-right: 12px;
+  border: none;
+  background-color: rgb(1, 43, 4);
+  color: rgb(81, 241, 69);
+  font-family: "Courier New", Courier, monospace;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* ---------- CHECKBOX ---------- */
+.field.checkbox {
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+}
+.field.checkbox input {
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  accent-color: rgb(81, 241, 69);
+}
+.field.checkbox label {
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* ---------- BUTON ---------- */
+.actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+button {
+  padding: 14px 27px;
+  border: none;
+  background-color: rgb(81, 241, 69);
+  color: rgb(1, 43, 4);
+  font-family: "Courier New", Courier, monospace;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+}
+button:hover {
+  background-color: rgb(212, 249, 209);
+}
+
+/* ---------- ECRANE MICI ---------- */
+@media (max-width: 700px) {
+  body {
+    align-items: flex-start;
+  }
+  main {
+    padding: 20px;
+  }
+  .span-2,
+  .span-3 {
+    grid-column: span 6;
+  }
+  .actions {
+    justify-content: stretch;
+  }
+  button {
+    width: 100%;
+  }
+}

@@ -1,0 +1,51 @@
+body {
+  font-family: "Courier New", Courier, monospace;
+}
+
+main {
+  width: 800px;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  margin: 150px auto;
+  gap: 50px;
+}
+h2 {
+  margin: 0px;
+}
+p {
+  margin: 0px;
+}
+div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 40px;
+  background-color: beige;
+}
+button {
+  padding: 17px 27px;
+  border: none;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: bold;
+  cursor: pointer;
+}
+#produs {
+  color: rgb(81, 241, 69);
+  background-color: rgb(1, 43, 4);
+  button {
+    background-color: rgb(81, 241, 69);
+  }
+}
+#categorie {
+  color: rgb(0, 0, 79);
+  background-color: rgb(164, 164, 255);
+  button {
+    background-color: rgb(0, 0, 79);
+    color: rgb(229, 229, 255);
+  }
+}
+img {
+  width: 64px;
+  height: 64px;
+}

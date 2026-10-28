@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="ro">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Adaugă produs</title>
+    <link rel="stylesheet" href="stylesheet/style_product_create.css" />
+  </head>
+
+  <body>
+    <main>
+      <header>
+        <h2>Adaugă produs</h2>
+        <p>Câmpurile marcate cu * sunt obligatorii.</p>
+      </header>
+
+      <form
+        action="product-create.php"
+        method="post"
+        enctype="multipart/form-data">
+        <div class="field span-3">
+          <label for="denumire">Denumire produs</label>
+          <input
+            type="text"
+            id="denumire"
+            name="denumire"
+            placeholder="Denumire produs"
+            required />
+        </div>
+
+        <div class="field span-3">
+          <label for="categorie">Categorie</label>
+          <select id="categorie" name="categorie" required>
+            <option value="">Alege categoria</option>
+            <option value="categorie1">Categorie 1</option>
+            <option value="categorie2">Categorie 2</option>
+            <option value="categorie3">Categorie 3</option>
+          </select>
+        </div>
+
+        <div class="field span-6">
+          <label for="descriere_scurta">Descriere scurtă</label>
+          <input
+            type="text"
+            id="descriere_scurta"
+            name="descriere_scurta"
+            placeholder="Maxim 160 de caractere"
+            maxlength="160"
+            required />
+        </div>
+
+        <div class="field span-6">
+          <label for="descriere_completa">Descriere completă</label>
+          <textarea
+            id="descriere_completa"
+            name="descriere_completa"
+            placeholder="Descriere completă"
+            rows="3"
+            required></textarea>
+        </div>
+
+        <div class="field span-2">
+          <label for="pret">Preț</label>
+          <input
+            type="number"
+            id="pret"
+            name="pret"
+            placeholder="0.00"
+            step="0.01"
+            min="0"
+            required />
+        </div>
+
+        <div class="field span-2">
+          <label for="stoc">Stoc</label>
+          <input
+            type="number"
+            id="stoc"
+            name="stoc"
+            placeholder="0"
+            step="1"
+            min="0"
+            required />
+        </div>
+
+        <div class="field span-2 optional">
+          <label for="tara">Țara</label>
+          <input type="text" id="tara" name="tara" placeholder="Țara" />
+        </div>
+
+        <!-- Rândul 5 -->
+        <div class="field span-3">
+          <label for="producator">Producător</label>
+          <input
+            type="text"
+            id="producator"
+            name="producator"
+            placeholder="Producător"
+            required />
+        </div>
+
+        <div class="field span-3">
+          <label for="imagine">Imagine</label>
+          <input
+            type="file"
+            id="imagine"
+            name="imagine"
+            accept="image/*"
+            required />
+        </div>
+
+        <!-- Rândul 6: checkbox + buton -->
+        <div class="field checkbox span-3 optional">
+          <input type="checkbox" id="activ" name="activ" />
+          <label for="activ">Produs activ</label>
+        </div>
+
+        <div class="actions span-3">
+          <button type="submit">Adaugă produs</button>
+        </div>
+      </form>
+    </main>
+  </body>
+</html>
