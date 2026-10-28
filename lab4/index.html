@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laborator</title>
+    <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <section>
+        <form action="sarcina2.php" method="POST">
+        <div>
+            <label for="numere">Numere</label>
+            <input type="text" name="numere">
+        </div>
+            <div>
+                <label for="operatii">Curs</label>
+               <select name="operatii" id="operatii">
+                <option value="suma">Sumă</option>
+                <option value="produs">Produs</option>
+                <option value="minim">Minim</option>
+                <option value="maxim">Maxim</option>
+                <option value="media">Media</option>
+                </select>
+            </div>
+            <div>
+            <input type="submit" name="submit">
+        </div>
+        </form>
+        </section>
+
+     <section style="margin: 100px;">
+        <form action="sarcina1.php" method="POST">
+        <input type="submit" value="Afiseaza">
+
+        </form>
+         <div>
+                <label for="filtrare">Curs</label>
+               <select name="filtrare" id="filtrare">
+                <option value="categorie">Categorie</option>
+                <option value="pret minim">Pret minim</option>
+                <option value="pret maxim">Pret maxim</option>
+                <option value="disponibile">Disponibile</option>
+                </select>
+            </div>
+    </section>
+    <section>
+        <h3>verificarea parolei</h3>
+        <form action="sarcina5.php" method="POST">
+            <div>
+            <label for="parola">Parola</label>
+            <input type="password" name="parola">
+            </div>
+            <div>
+            <input type="submit">
+            </div>
+        </form>
+        
+    </section>
+
+</body>
+</html>
