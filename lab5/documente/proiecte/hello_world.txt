@@ -1,0 +1,5 @@
+Titlu: hello_world
+Autor: elly
+Data: 15.11.2026
+--------------------------------
+when you open a file you need to check for viruses
