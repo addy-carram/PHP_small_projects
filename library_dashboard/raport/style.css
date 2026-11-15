@@ -1,0 +1,122 @@
+.book-img {
+  width: 250px;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  align-self: center;
+  margin-bottom: 0.75rem;
+}
+.book-author,
+.book-publisher {
+  font-size: 14px;
+  color: #6c757d;
+}
+h3 {
+  font-size: 20px;
+}
+p {
+  font-size: 14px;
+  color: #6c757d;
+}
+.book-card {
+  position: relative;
+  width: 200px;
+  height: 460px;
+  padding: 10px;
+  border: 3px solid transparent;
+  border-radius: 8px;
+  transition:
+    border-color 0.2s,
+    background-color 0.2s;
+}
+
+.book-card:hover,
+.book-card:focus-within {
+  border-color: #0d6efd;
+  background-color: rgba(13, 109, 253, 0.421);
+  width: 210px;
+
+  .book-img,
+  .book-title,
+  .book-author,
+  .book-publisher,
+  p {
+    opacity: 0.5;
+  }
+}
+
+.book-img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+}
+
+.book-actions {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.book-card:hover .book-actions,
+.book-card:focus-within .book-actions {
+  opacity: 1;
+}
+
+.book-btn {
+  min-width: 90px;
+  padding: 0.3rem 0.75rem;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-decoration: none;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+}
+
+.book-btn-delete {
+  background: #dc3545;
+  color: #fff;
+}
+.book-btn-add {
+  background: #21e30c;
+  color: #011806;
+  cursor: pointer;
+  border: none;
+}
+
+.book-btn-edit {
+  background: #ffc107;
+  color: #000;
+}
+.modal-book-img {
+  display: block;
+  width: 120px;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  border-radius: 6px;
+  margin: 0 auto 1rem;
+}
+.notificare {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 9999;
+  padding: 0.75rem 1.25rem;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: opacity 0.4s;
+}
+
+.notificare-adaugata { background: #198754; }
+.notificare-editata  { background: #ffc107; color: #000; }
+.notificare-stearsa  { background: #dc3545; }
